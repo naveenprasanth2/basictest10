@@ -12,38 +12,30 @@ public class SortTheStack {
     }
 
     public static void main(String[] args) {
-        source.push(1);
+        source.push(55);
         source.push(2);
         source.push(3);
         source.push(4);
         source.push(5);
         source.push(6);
         source.push(0);
+        source.push(-2);
+        System.out.println(source);
         sortTheStack(source);
         System.out.println(sorted);
     }
 
     static void sortTheStack(Stack<Integer> source) {
-        int count;
         while (!source.isEmpty()) {
-            count = 1;
             if (sorted.isEmpty()) {
                 sorted.push(source.pop());
             } else {
-                int valFromSorted = sorted.peek();
-                if (valFromSorted > source.peek()) {
-                    int valFromSource = source.pop();
-                    count++;
-                    while (sorted.peek() < valFromSource) {
-                        sorted.push(valFromSource);
-                    }
-                    while (count != 1) {
-                        sorted.push(source.pop());
-                        count--;
-                    }
-                } else {
-                    int valFromSource = source.pop();
-                    sorted.push(valFromSource);
+                int valueFromSource = source.pop();
+                while (sorted.peek() > valueFromSource){
+                    source.push(sorted.pop());
+                }
+                if(sorted.peek() < valueFromSource){
+                    sorted.push(valueFromSource);
                 }
             }
         }
