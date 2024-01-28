@@ -14,6 +14,6 @@ public class InterfaceTest implements InterfaceDemo{
 
      public static void main(String[] args) {
           InterfaceTest interfaceTest = new InterfaceTest();
-          interfaceTest.test();
+          InterfaceDemo.testing();
      }
 }
