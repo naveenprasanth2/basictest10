@@ -9,6 +9,7 @@ public class SingletonExample {
         System.out.println(singleton.hashCode());
 
         Class<?> className = Class.forName("org.example.practise4.Singleton");
+        @SuppressWarnings("unchecked")
         Constructor<Singleton> constructor = (Constructor<Singleton>) className.getDeclaredConstructor();
         constructor.setAccessible(true);
         constructor.newInstance();
