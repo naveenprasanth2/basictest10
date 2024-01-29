@@ -124,7 +124,7 @@ public class LinkedListExample {
 //        linkedListExample.addNodeAtEnd(7);
         linkedListExample.addNodeAtBeginning(5);
 //        linkedListExample.addNodeAtIndex(2, 0);
-//        linkedListExample.deleteNodesAtLastIndex();
+        linkedListExample.deleteNodesAtLastIndex();
 //        linkedListExample.deleteNodeAtStart();
 //        linkedListExample.deleteNodeAtSpecifiedIndex(1);
 //        linkedListExample.deleteNodeAtSpecifiedIndex(4);
